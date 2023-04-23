@@ -26,6 +26,7 @@
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   letter-spacing: 0.1rem;
+  /* border: 1px solid red;  */
 }
 
 html {
@@ -43,7 +44,7 @@ html {
   font-size: 3rem;
   font-weight: 500;
   color: var(--shade3);
-  margin: 4rem 0;
+
   text-shadow: 0.05rem 0.05rem 0.1rem var(--grey);
   transform: skew(-5deg);
 }
@@ -69,43 +70,39 @@ html {
 
 .who-am-i {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--shade3);
   margin: 0 3rem;
   position: relative;
-  transition: color 0.2s, text-shadow 0.2s, background-color 0.2s, skew 0.5s;
+  transition: color 0.5s, text-shadow 0.2s, background-color 0.2s, skew 0.5s;
+  z-index: 1;
 }
 .who-am-i:hover {
-  text-shadow: 0.01rem 0.01rem 0.01rem var(--grey);
+  text-shadow: 0.01rem 0.01rem 0.01rem var(--lightgrey);
+  color: var(--shade5);
 }
 
 .who-am-i::before {
   content: "";
   width: 0;
-  height: 0.1rem;
+  height: 100%;
   background-color: var(--shade3);
   position: absolute;
-  left: -15%;
-  bottom: -0.3rem;
-  transition: width 0.2s, skew 0.2s;
+  transition: width 0.2s, skew 0.05s;
+  z-index: -1;
+  transform: skew(-35deg);
+  left: -10%;
 }
 
 .who-am-i:hover::before {
-  width: 130%;
-  transform: skew(-3deg);
+  width: 120%;
 }
 
 /*Navbar*/
 .navbar {
   width: 100%;
   height: 5vh;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 71, 52, 1) 0%,
-    rgba(0, 127, 95, 1) 20%,
-    rgba(0, 127, 95, 1) 80%,
-    rgba(0, 71, 52, 1) 100%
-  );
+  background: linear-gradient(90deg, rgba(0, 71, 52, 1) 0%, rgba(0, 127, 95, 1) 20%, rgba(0, 127, 95, 1) 80%, rgba(0, 71, 52, 1) 100%);
   box-shadow: 0.2rem 0.2rem 0.5rem var(--grey);
   display: flex;
   z-index: 5;
@@ -159,10 +156,10 @@ html {
   align-items: center;
 }
 .about-me-text {
-  margin: 25vh auto;
+  margin: auto;
   color: var(--black);
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1rem;
   width: 80vw;
 }
 
