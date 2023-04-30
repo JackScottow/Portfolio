@@ -133,10 +133,10 @@ html {
 .navbar-link::before {
   content: "";
   width: 0;
-  height: 90%;
+  height: 0;
   background-color: var(--lightgrey);
   position: absolute;
-  transition: width 0.3s 0.05s;
+  transition: width 0.3s 0.05s, height 0.3s;
   z-index: -1;
   transform: skew(-40deg);
   left: -15%;
@@ -145,6 +145,7 @@ html {
 
 .navbar-link:hover::before {
   width: 130%;
+  height: 90%;
 }
 /*End of Navbar*/
 
@@ -162,8 +163,8 @@ html {
   margin: auto;
   color: var(--grey);
   font-weight: 500;
-  font-size: 1.75rem;
-  width: 95vw;
+  font-size: 2rem;
+  width: 70vw;
 }
 
 /* End of about me */
