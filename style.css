@@ -153,18 +153,22 @@ html {
 .about-me {
   width: 100%;
   height: 100vh;
-  background-color: var(--lightgrey);
-  background-position: bottom;
+  opacity: 0.6;
+  background-image: radial-gradient(#444 2px, #ccc 2px);
+  background-size: 10rem 10rem;
+  background-position: top;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .about-me-text {
+  background-color: #ccc;
   margin: auto;
-  color: var(--grey);
-  font-weight: 500;
+  color: black;
+  font-weight: 600;
   font-size: 2rem;
   width: 70vw;
+  padding: 10rem 0;
 }
 
 /* End of about me */
@@ -344,34 +348,48 @@ html {
 /* End of footer */
 
 /* Responsive */
-@media (max-width: 900px) {
+/* Extra small devices (phones) */
+@media only screen and (max-width: 575px) {
+  html {
+    font-size: 50%;
+  }
+
   .navbar-link {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
   }
 
-  .section-heading {
-    font-size: 2.5rem;
+  .about-me-text {
+    margin: auto;
+
+    width: 90vw;
+  }
+  .about-me-text p {
+    font-size: 1.5rem;
   }
 }
 
-@media (max-width: 800px) {
-  .project-img {
-    width: 100%;
-  }
-
+/* Small devices (tablets) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
   html {
-    font-size: 65%;
+    font-size: 60%;
   }
 }
+.about-me-text {
+  padding: 5rem 2rem;
+}
 
-@media (max-width: 500px) {
+/* Medium devices (desktops) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   html {
-    font-size: 55%;
   }
-
-  /* .contact-form {
-    height: 25vh;
-    margin-top: 10vh;
-  } */
 }
+
+/* Large devices (large desktops) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Extra large devices (extra large desktops) */
+@media only screen and (min-width: 1200px) {
+}
+
 /* End of Responsive */
